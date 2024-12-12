@@ -1,10 +1,8 @@
-// src/App.test.js
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-// Mock toastify
 jest.mock('react-toastify', () => ({
   toast: {
     success: jest.fn(),
@@ -104,7 +102,7 @@ describe('App Component', () => {
     const ratingInputs = screen.getAllByRole('radio');
     expect(ratingInputs).toHaveLength(5);
     
-    fireEvent.click(ratingInputs[4]); // Select 5-star rating
+    fireEvent.click(ratingInputs[4]);
     expect(ratingInputs[4]).toBeChecked();
   });
 });

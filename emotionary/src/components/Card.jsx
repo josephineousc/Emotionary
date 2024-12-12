@@ -12,7 +12,6 @@ function Card({ emotion, onSave, onUnsave, onDelete, isBookmarked }) {
     try {
       const urlObj = new URL(url);
       
-      // YouTube URLs
       if (urlObj.hostname.includes('youtube.com') || urlObj.hostname.includes('youtu.be')) {
         const videoId = urlObj.hostname.includes('youtube.com') 
           ? new URLSearchParams(urlObj.search).get('v')
@@ -20,7 +19,6 @@ function Card({ emotion, onSave, onUnsave, onDelete, isBookmarked }) {
         return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
       }
 
-      // Rest of getThumbnail logic remains the same
     } catch (error) {
       console.error('Error parsing URL:', error);
       return `https://placehold.co/600x400/lightgray/white?text=${mediaType}`;
@@ -34,7 +32,6 @@ function Card({ emotion, onSave, onUnsave, onDelete, isBookmarked }) {
   };
 
   const handleCardClick = (e) => {
-    // Prevent navigation if clicking on buttons
     if (e.target.tagName !== 'BUTTON') {
       navigate(`/emotions/${emotion.id}`);
     }
@@ -74,13 +71,13 @@ function Card({ emotion, onSave, onUnsave, onDelete, isBookmarked }) {
               href={emotion.url} 
               target="_blank" 
               rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()} // Prevent card navigation when clicking link
+              onClick={(e) => e.stopPropagation()} 
             >
               Visit Media
             </a>
           </p>
         )}
-        <div className="card-buttons" onClick={(e) => e.stopPropagation()}> {/* Prevent card navigation when clicking buttons */}
+        <div className="card-buttons" onClick={(e) => e.stopPropagation()}> 
           {isBookmarked ? (
             <button
               onClick={() => onUnsave(emotion.id)}

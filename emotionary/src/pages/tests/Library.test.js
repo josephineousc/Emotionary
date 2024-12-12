@@ -1,10 +1,8 @@
-// src/pages/__tests__/Library.test.js
 import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Library from '../Library';
 
-// Mock toastify
 jest.mock('react-toastify', () => ({
   toast: {
     success: jest.fn(),
@@ -60,7 +58,6 @@ describe('Library Component', () => {
   });
 
   test('displays bookmarked emotions', async () => {
-    // Mock both API calls
     global.fetch
       .mockImplementationOnce(() => Promise.resolve({
         ok: true,

@@ -1,10 +1,8 @@
-// src/pages/__tests__/EmotionDetail.test.js
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import EmotionDetail from '../EmotionDetail';
 
-// Mock toastify
 jest.mock('react-toastify', () => ({
   toast: {
     success: jest.fn(),
@@ -25,12 +23,10 @@ const mockEmotion = {
 describe('EmotionDetail Component', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    // Reset fetch mock before each test
     global.fetch = jest.fn();
   });
 
   test('displays loading state initially', async () => {
-    // Mock fetch to return a delayed response
     global.fetch.mockImplementation(() => 
       new Promise(resolve => {
         setTimeout(() => {
@@ -50,7 +46,6 @@ describe('EmotionDetail Component', () => {
       </MemoryRouter>
     );
 
-    // Check for loading state
     await waitFor(() => {
       expect(screen.getByText('Loading...')).toBeInTheDocument();
     });

@@ -114,7 +114,7 @@
 }
 
 .content {
-  margin-left: 300px; /* This ensures content starts after sidebar */
+  margin-left: 300px; 
   flex: 1;
   padding: 2rem;
   background: #fff;
@@ -146,7 +146,7 @@ button:disabled {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   padding: 1rem;
-  grid-auto-rows: auto; /* This allows cards to have different heights */
+  grid-auto-rows: auto; 
 }
 
 .card {
@@ -156,7 +156,7 @@ button:disabled {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: fit-content; /* This allows the card to adjust to its content */
+  height: fit-content; 
   display: flex;
   flex-direction: column;
 }
@@ -509,9 +509,6 @@ button:disabled {
   margin-top: 0.5rem;
 }
 
-
-/* Update these styles in your App.css */
-
 .rating-radio-group {
   display: block;
   width: 100%;
@@ -584,7 +581,6 @@ button:disabled {
   color: #666;
 }
 
-/* Update timestamp toggle to match style */
 .timestamp-toggle {
   margin-top: 1rem;
   padding: 1rem;
@@ -608,9 +604,6 @@ button:disabled {
   height: 1rem;
   margin: 0;
 }
-
-
-/* Add to App.css */
 
 .form-group {
   position: relative;

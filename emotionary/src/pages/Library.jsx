@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Card from "../components/Card";
 
-function Library({ filter, searchTerm, showTimestamp }) {  // Add showTimestamp prop
+function Library({ filter, searchTerm, showTimestamp }) { 
   const [bookmarkedEmotions, setBookmarkedEmotions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -121,7 +121,7 @@ function Library({ filter, searchTerm, showTimestamp }) {  // Add showTimestamp 
       {filteredEmotions.length > 0 ? (
         filteredEmotions.map((emotion) => (
           <div key={emotion.id} className="bookmarked-item">
-            {showTimestamp && (  // Use showTimestamp prop to conditionally render
+            {showTimestamp && (
               <div className="bookmark-date">
                 Saved on: {new Date(emotion.dateBookmarked).toLocaleDateString()} at{' '}
                 {new Date(emotion.dateBookmarked).toLocaleTimeString()}

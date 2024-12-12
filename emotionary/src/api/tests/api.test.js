@@ -1,4 +1,3 @@
-// src/api/__tests__/api.test.js
 import { 
   fetchEmotions, 
   createEmotion, 
@@ -11,12 +10,10 @@ import {
 } from "../api";
 
 describe('API Functions', () => {
-  // Setup mock fetch before each test
   beforeEach(() => {
     global.fetch = jest.fn();
   });
 
-  // Clear all mocks after each test
   afterEach(() => {
     jest.clearAllMocks();
   });

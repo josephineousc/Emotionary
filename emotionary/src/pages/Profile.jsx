@@ -31,7 +31,7 @@ function Profile() {
         );
         const userBookmarks = bookmarks
           .map((b) => emotions.find((e) => e.id === b.emotionId))
-          .filter(Boolean); // Remove undefined matches
+          .filter(Boolean);
 
         setAllUsers(users);
         setUser(currentUser || null);
@@ -57,7 +57,6 @@ function Profile() {
     <div className="container">
       <h1>User Profile</h1>
 
-      {/* User Selector Dropdown */}
       <label htmlFor="user-select">Select User: </label>
       <select
         id="user-select"
@@ -74,14 +73,11 @@ function Profile() {
 
       {user ? (
         <>
-          {/* User Details */}
           <ProfileCard user={user} />
 
-          {/* User Reactions */}
           <h2>Your Reactions</h2>
           <ReactionList reactions={reactions} />
 
-          {/* User Bookmarks */}
           <h2>Your Bookmarked Reactions</h2>
           <ReactionList reactions={bookmarks} />
         </>
