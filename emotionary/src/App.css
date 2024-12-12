@@ -1,0 +1,644 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Helvetica, sans-serif;
+}
+
+.body {
+    font-family: Helvetica, sans-serif;
+
+}
+
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  padding: 2rem;
+  padding-top: 1rem;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+  font-family: Helvetica, sans-serif;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.search-input {
+  width: 92%;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 0 rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: Helvetica, sans-serif;
+}
+
+.filter-btn.active {
+  background: #000;
+  color: white;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.nav-list li {
+  margin-bottom: 0.5rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-list a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.new-form input, .new-form select, .new-form textarea {
+  display: block;
+  width: 100%; /* Ensures full width */
+  margin-bottom: 0.5rem; /* Adds spacing */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+.add-new {
+  background: #f5f5f5;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  font-family: Helvetica, sans-serif;
+}
+
+.add-new h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin-left: 300px; /* This ensures content starts after sidebar */
+  flex: 1;
+  padding: 2rem;
+  background: #fff;
+  font-family: Helvetica, sans-serif;
+}
+
+.error {
+  color: #ffffff;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+button {
+  transition: all 0.2s;
+  font-family: Helvetica, sans-serif;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  grid-auto-rows: auto; /* This allows cards to have different heights */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: fit-content; /* This allows the card to adjust to its content */
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.emotion-type {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.rating {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.save-button,
+.delete-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+}
+
+.save-button {
+  background: #333;
+  color: white;
+  border: #000 1px solid;
+}
+
+.delete-button {
+  background: #ffffff;
+  color: black;
+  border: #000 1px solid;
+}
+
+.save-button:hover,
+.delete-button:hover {
+  opacity: 0.9;
+}
+
+.delete-confirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.delete-confirmation p {
+  margin-bottom: 25px;
+}
+
+.delete-confirmation button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.delete-confirmation .confirm-button {
+  background-color:  #333;
+  color: white;
+}
+
+.delete-confirmation .cancel-button {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+.delete-confirmation button:hover {
+  opacity: 0.9;
+}
+
+.thumbnail-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  font-family: Helvetica, sans-serif;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.bookmarked-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.bookmark-date {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-section {
+  margin: 2rem 0;
+}
+
+.about-section h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.about-section li {
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+.media-type {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.rating {
+  color: #FFB000;
+  margin: 0.5rem 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.rating-number {
+  color: #666;
+  font-size: 0.9rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.url a {
+  color: #0066cc;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+}
+
+.url a:hover {
+  text-decoration: underline;
+}
+
+.unsave-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  background: #333;
+  color: white;
+  border: #000 1px solid;
+}
+
+.unsave-button:hover {
+  opacity: 0.9;
+}
+
+
+.emotion-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.emotion-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  top: 0px;
+  z-index: 100;
+  background: white;
+}
+
+.emotion-nav button {
+  max-width: 200px;
+}
+
+.emotion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.emotion-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.emotion-media-tag {
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.emotion-image-container {
+  margin-bottom: 2rem;
+}
+
+.emotion-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.emotion-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  font-family: Helvetica, sans-serif;
+}
+
+.emotion-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.emotion-detail-item {
+  margin-bottom: 1rem;
+}
+
+.emotion-detail-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.emotion-timestamp {
+  margin-top: 0.5rem;
+  color: #666;
+  font-family: Helvetica, sans-serif;
+}
+
+.emotion-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  margin-top: 0.5rem;
+  font-family: Helvetica, sans-serif;
+  transition: background-color 0.2s;
+}
+
+.emotion-source-link:hover {
+  background: #eee;
+  text-decoration: none;
+}
+
+.emotion-rating {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+
+/* Update these styles in your App.css */
+
+.rating-radio-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  background: white;
+}
+
+.rating-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-family: Helvetica, sans-serif;
+}
+
+.rating-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+  padding: 0 0.5rem;
+}
+
+.rating-radio-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  padding: 0.5rem 0.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.rating-radio-label:hover {
+  background-color: #f5f5f5;
+}
+
+.rating-radio-label input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 1.5px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  transition: all 0.2s;
+}
+
+.rating-radio-label:hover input[type="radio"]:not(:checked) {
+  border-color: #999;
+}
+
+.rating-radio-label input[type="radio"]:checked {
+  border: 1.5px solid #333;
+  background-color: #333;
+}
+
+.rating-radio-value {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Update timestamp toggle to match style */
+.timestamp-toggle {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+
+
+/* Add to App.css */
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.input-error {
+  border-color: #dc2626 !important;
+}
+
+.input-error:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1);
+}
+
+.new-form input.input-error,
+.new-form select.input-error,
+.new-form textarea.input-error {
+  border-color: #dc2626;
+}
+
+.rating-radio-group.input-error {
+  border-color: #dc2626;
+}

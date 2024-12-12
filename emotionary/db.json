@@ -1,0 +1,147 @@
+{
+  "emotions": [
+    {
+      "id": "1",
+      "userId": 1,
+      "media": "Movies",
+      "emotionType": "awe",
+      "description": "Inception isn't just a movie; it's a mind-bending journey that leaves me questioning the nature of reality long after the credits roll. The concept of dreams within dreams resonates deeply with my own experiences of vivid dreaming and the blurry lines between imagination and reality.",
+      "timestamp": "2024-10-01T10:00:00Z",
+      "rating": 4,
+      "mediaTitle": "Inception",
+      "thumbnailUrl": "https://example.com/thumbnails/inception.jpg",
+      "url": "https://www.youtube.com/watch?v=herRuccntNE"
+    },
+    {
+      "id": "ea6737c0-cc52-4210-82c1-ff34109b9942",
+      "userId": 1,
+      "media": "Movies",
+      "description": "This movie is a visual poem that captures the essence of urban loneliness and fleeting connections. The neon-soaked streets of Hong Kong become a character in themselves, mirroring the internal landscapes of the film's lost souls. I find myself deeply moved by the silent yearning of the characters, especially in those moments of almost-connection. The scene where Michelle Reis' character rides on the back of Takeshi Kaneshiro's motorcycle, set to \"Only You\" by The Flying Pickets, is pure cinematic magic. It perfectly encapsulates that rare moment of finding intimacy in a world of strangers. This film reminds me of my own late-night wanderings, the bittersweet feeling of being alone in a crowd, and the beauty found in ephemeral encounters.",
+      "timestamp": "2024-12-12T02:40:20.513Z",
+      "rating": 5,
+      "mediaTitle": "Fallen Angels by Wong Kar-Wai",
+      "url": "https://www.youtube.com/watch?v=uxaT19BlH0M"
+    },
+    {
+      "id": "ef37a0c6-f154-4f21-bf6d-7bea96d8ea1a",
+      "userId": 1,
+      "media": "TV",
+      "description": "Arcane continues to be a masterclass in storytelling and animation. The second season delves even deeper into the complex relationships and moral ambiguities that made the first season so compelling. The evolution of Vi and Jinx's sisterhood is heart-wrenching, forcing me to confront my own familial relationships and the pain of growing apart. The stunning visuals and attention to detail in every frame never fail to leave me in awe. Arcane's exploration of themes like class struggle, the corrupting nature of power, and the consequences of technological advancement resonates strongly with our current societal issues. It's a reminder of the power of animation to tackle mature, nuanced themes and evoke genuine emotional responses.",
+      "timestamp": "2024-12-12T02:45:49.824Z",
+      "rating": 4,
+      "mediaTitle": "Arcane Season 2",
+      "url": "https://www.youtube.com/watch?v=ysqiEC6bLUI"
+    },
+    {
+      "id": "a6f5549b-1bca-40b6-bc59-b390ddc3b919",
+      "userId": 1,
+      "media": "Music",
+      "description": "\"P.Y.T.\" is pure joy distilled into music. From the moment those synths kick in, it's impossible not to move. Michael's vocals are playful and infectious, perfectly capturing the giddy excitement of young love. The song takes me back to carefree summer days and nights spent dancing with friends. It's a reminder of the simple pleasure of losing yourself in a great pop song. The backing vocals by Janet and La Toya Jackson add an extra layer of familial warmth to the track. \"P.Y.T.\" is my go-to song when I need an instant mood boost.",
+      "timestamp": "2024-12-12T02:48:11.222Z",
+      "rating": 5,
+      "mediaTitle": "P.Y.T. (Pretty Young Thing) - Michael Jackson",
+      "url": "https://www.youtube.com/watch?v=_GlgOkBR1vU"
+    },
+    {
+      "id": "b6a61017-4288-426a-8e12-3f7f3e6009f7",
+      "userId": 1,
+      "media": "Anime",
+      "description": "Kimi no Na wa wrecks me every single time. EVERY. TIME. I don't care how many times I've seen it, I'm always a sobbing mess by the end. It's just so beautiful, you know? The animation, the music, the story - it all comes together perfectly. That scene with the comet? Breathtaking. And don't even get me started on the body-swapping stuff. It's hilarious but also so sweet? I'm a sucker for stories about fate and connection, and this one just hits all the right spots. Plus, the RADWIMPS soundtrack? Chef's kiss.",
+      "timestamp": "2024-12-12T03:11:31.673Z",
+      "rating": 5,
+      "mediaTitle": "Kimi no Na wa (Your Name)",
+      "url": "https://www.youtube.com/watch?v=FO2n86U9ZqY"
+    },
+    {
+      "id": "e2a98e82-5d5d-42fd-9b52-788581bb327d",
+      "userId": 1,
+      "media": "Music",
+      "description": "This song, 爛泥 (Làn Ní), or \"Wimpish/Mud,\" is an emotional gut punch that hits you right in the feels. It's one of those tracks that feels like it’s speaking directly to the part of you that’s tired, frustrated, and maybe even a little lost. The lyrics are so raw and poetic, asking questions like, \"Oh, what a beautiful mind! But how did it turn into a pile of mud?\" It’s like they’re reflecting on how innocence and purity get crushed under the weight of reality. Honestly, it makes me think about all the times I’ve felt stuck or disappointed in myself or the world around me.\nThe way the song builds is incredible—starting slow and reflective, then exploding into this powerful, almost chaotic energy. It’s like all that bottled-up frustration finally bursts out. That contrast between quiet introspection and loud catharsis is what makes it so impactful.",
+      "timestamp": "2024-12-12T03:26:57.908Z",
+      "rating": 5,
+      "mediaTitle": "爛泥 (Làn Ní) by No Party for Cao Dong",
+      "url": "https://www.youtube.com/watch?v=2fQ5es-qLaY"
+    },
+    {
+      "id": "3bc738ac-2154-44a1-a727-7f0232c4703e",
+      "userId": 1,
+      "media": "Anime",
+      "description": "Space Dandy is what I imagine a fever dream on acid would be like, but in the best possible way. It's so random and out there, but that's what makes it amazing. One episode you're crying over a story about reincarnation, the next you're laughing at some ridiculous alien race. It's got this way of being super profound one minute and then completely silly the next. I love how it doesn't take itself too seriously. It's a reminder to just go with the flow and enjoy the ride, you know?",
+      "timestamp": "2024-12-12T03:33:48.323Z",
+      "rating": 3,
+      "mediaTitle": "Space Dandy",
+      "url": "https://www.youtube.com/watch?v=IZzSxLdLVp4"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "emotionId": 1,
+      "userId": 2,
+      "comment": "I loved that scene too! Nolan's visuals are always stunning.",
+      "timestamp": "2024-10-01T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "emotionId": 2,
+      "userId": 1,
+      "comment": "This song is a classic! So many memories associated with it.",
+      "timestamp": "2024-10-02T16:00:00Z"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "1e08",
+      "userId": 1,
+      "emotionId": "1",
+      "dateBookmarked": "2024-12-11T23:48:46.837Z"
+    },
+    {
+      "id": "3e22",
+      "userId": 1,
+      "emotionId": "a6f5549b-1bca-40b6-bc59-b390ddc3b919",
+      "dateBookmarked": "2024-12-12T02:48:57.415Z"
+    },
+    {
+      "id": "5bcc",
+      "userId": 1,
+      "emotionId": "ea6737c0-cc52-4210-82c1-ff34109b9942",
+      "dateBookmarked": "2024-12-12T02:49:18.984Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "profileImage": "https://example.com/profiles/john.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "profileImage": "https://example.com/profiles/jane.jpg"
+    }
+  ],
+  "media": [
+    {
+      "id": "1",
+      "title": "Inception",
+      "type": "Movie",
+      "creator": "Christopher Nolan",
+      "thumbnail": "https://example.com/thumbnails/inception.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Bohemian Rhapsody",
+      "type": "Music",
+      "creator": "Queen",
+      "thumbnail": "https://example.com/thumbnails/bohemian-rhapsody.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Mountainscape",
+      "type": "Photography",
+      "creator": "National Geographic",
+      "thumbnail": "https://example.com/thumbnails/mountainscape.jpg"
+    }
+  ]
+}
