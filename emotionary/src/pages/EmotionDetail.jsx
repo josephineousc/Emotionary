@@ -67,8 +67,8 @@ function EmotionDetail() {
     const fetchData = async () => {
       try {
         const [emotionResponse, bookmarksResponse] = await Promise.all([
-          fetch(`http://localhost:4000/emotions/${id}`),
-          fetch(`http://localhost:4000/bookmarks?emotionId=${id}`)
+          fetch(`http://localhost:3000/emotions/${id}`),
+          fetch(`http://localhost:3000/bookmarks?emotionId=${id}`)
         ]);
 
         if (!emotionResponse.ok) {
@@ -96,7 +96,7 @@ function EmotionDetail() {
 
   const handleSave = async () => {
     try {
-      const response = await fetch('http://localhost:4000/bookmarks', {
+      const response = await fetch('http://localhost:3000/bookmarks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -119,13 +119,13 @@ function EmotionDetail() {
 
   const handleUnsave = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/bookmarks?emotionId=${id}`);
+      const response = await fetch(`http://localhost:3000/bookmarks?emotionId=${id}`);
       const data = await response.json();
       const bookmarkId = data[0]?.id;
 
       if (!bookmarkId) throw new Error('Bookmark not found');
 
-      await fetch(`http://localhost:4000/bookmarks/${bookmarkId}`, {
+      await fetch(`http://localhost:3000/bookmarks/${bookmarkId}`, {
         method: 'DELETE',
       });
 
@@ -139,7 +139,7 @@ function EmotionDetail() {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this emotion?')) {
       try {
-        const response = await fetch(`http://localhost:4000/emotions/${id}`, {
+        const response = await fetch(`http://localhost:3000/emotions/${id}`, {
           method: 'DELETE',
         });
 

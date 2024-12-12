@@ -1,7 +1,7 @@
 ### run server
 
 ```
-json-server --watch db.json --port 4000
+json-server --watch db.json --port 3000
 ```
 
 ### run app
