@@ -11,13 +11,13 @@ function Library({ filter, searchTerm, showTimestamp }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const bookmarksResponse = await fetch("http://localhost:3000/bookmarks");
+        const bookmarksResponse = await fetch("http://localhost:4000/bookmarks");
         if (!bookmarksResponse.ok) {
           throw new Error(`HTTP error! status: ${bookmarksResponse.status}`);
         }
         const bookmarksData = await bookmarksResponse.json();
 
-        const emotionsResponse = await fetch("http://localhost:3000/emotions");
+        const emotionsResponse = await fetch("http://localhost:4000/emotions");
         if (!emotionsResponse.ok) {
           throw new Error(`HTTP error! status: ${emotionsResponse.status}`);
         }
@@ -50,7 +50,7 @@ function Library({ filter, searchTerm, showTimestamp }) {
         emotion => emotion.id === emotionId
       );
 
-      const response = await fetch(`http://localhost:3000/bookmarks/${bookmarkToRemove.bookmarkId}`, {
+      const response = await fetch(`http://localhost:4000/bookmarks/${bookmarkToRemove.bookmarkId}`, {
         method: 'DELETE',
       });
 
@@ -74,7 +74,7 @@ function Library({ filter, searchTerm, showTimestamp }) {
 
   const confirmDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/emotions/${deleteId}`, {
+      const response = await fetch(`http://localhost:4000/emotions/${deleteId}`, {
         method: 'DELETE',
       });
 

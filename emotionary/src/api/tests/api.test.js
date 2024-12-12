@@ -30,7 +30,7 @@ describe('API Functions', () => {
 
       const emotions = await fetchEmotions();
       expect(emotions).toEqual(mockEmotions);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/emotions');
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/emotions');
       expect(fetch).toHaveBeenCalledTimes(1);
     });
 
@@ -60,7 +60,7 @@ describe('API Functions', () => {
 
       const result = await createEmotion(mockEmotionData);
       expect(result).toEqual(mockResponse);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/emotions', {
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/emotions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ describe('API Functions', () => {
       );
 
       await deleteEmotion(1);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/emotions/1', {
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/emotions/1', {
         method: 'DELETE',
       });
     });
@@ -113,7 +113,7 @@ describe('API Functions', () => {
 
       const result = await updateEmotion(1, mockUpdates);
       expect(result).toEqual(mockResponse);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/emotions/1', {
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/emotions/1', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ describe('API Functions', () => {
 
       const result = await saveEmotion(1, 1);
       expect(result).toEqual(mockResponse);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/bookmarks', {
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/bookmarks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -173,7 +173,7 @@ describe('API Functions', () => {
 
       const result = await getSavedEmotions(1);
       expect(result).toEqual(mockSavedEmotions);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/bookmarks?userId=1&_expand=emotion');
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/bookmarks?userId=1&_expand=emotion');
     });
 
     test("handles fetch saved emotions error", async () => {
@@ -197,7 +197,7 @@ describe('API Functions', () => {
 
       const result = await getMedia();
       expect(result).toEqual(mockMedia);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/media');
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/media');
     });
 
     test("handles fetch media error", async () => {
@@ -221,7 +221,7 @@ describe('API Functions', () => {
 
       const result = await getMediaById(1);
       expect(result).toEqual(mockMedia);
-      expect(fetch).toHaveBeenCalledWith('http://localhost:3000/media/1');
+      expect(fetch).toHaveBeenCalledWith('http://localhost:4000/media/1');
     });
 
     test("handles fetch media by id error", async () => {

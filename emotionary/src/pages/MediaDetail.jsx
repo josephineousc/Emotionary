@@ -10,7 +10,7 @@ export default function MediaDetail({ match }) {
   const mediaId = match.params.mediaId;
 
   useEffect(() => {
-    fetch(`http://localhost:3000/media/${mediaId}`)
+    fetch(`http://localhost:4000/media/${mediaId}`)
       .then((response) => response.json())
       .then((data) => {
         setMedia(data);
@@ -18,12 +18,12 @@ export default function MediaDetail({ match }) {
       })
       .catch((error) => console.error("Error fetching media:", error));
 
-    fetch(`http://localhost:3000/emotions?mediaId=${mediaId}&_expand=user`)
+    fetch(`http://localhost:4000/emotions?mediaId=${mediaId}&_expand=user`)
       .then((response) => response.json())
       .then((data) => setReactions(data))
       .catch((error) => console.error("Error fetching reactions:", error));
 
-    fetch(`http://localhost:3000/comments?mediaId=${mediaId}`)
+    fetch(`http://localhost:4000/comments?mediaId=${mediaId}`)
       .then((response) => response.json())
       .then((data) => setComments(data))
       .catch((error) => console.error("Error fetching comments:", error));
@@ -36,7 +36,7 @@ export default function MediaDetail({ match }) {
       timestamp: new Date().toISOString(),
     };
 
-    fetch("http://localhost:3000/comments", {
+    fetch("http://localhost:4000/comments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newComment),

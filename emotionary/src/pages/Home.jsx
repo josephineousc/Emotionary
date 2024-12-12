@@ -15,8 +15,8 @@ function Home({ filter, searchTerm }) {
     const fetchData = async () => {
       try {
         const [emotionsResponse, bookmarksResponse] = await Promise.all([
-          fetch('http://localhost:3000/emotions'),
-          fetch('http://localhost:3000/bookmarks')
+          fetch('http://localhost:4000/emotions'),
+          fetch('http://localhost:4000/bookmarks')
         ]);
 
         if (!emotionsResponse.ok || !bookmarksResponse.ok) {
@@ -66,7 +66,7 @@ function Home({ filter, searchTerm }) {
 
   const handleSave = async (emotion) => {
     try {
-      const response = await fetch('http://localhost:3000/bookmarks', {
+      const response = await fetch('http://localhost:4000/bookmarks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,13 +89,13 @@ function Home({ filter, searchTerm }) {
 
   const handleUnsave = async (emotionId) => {
     try {
-      const response = await fetch(`http://localhost:3000/bookmarks?emotionId=${emotionId}`);
+      const response = await fetch(`http://localhost:4000/bookmarks?emotionId=${emotionId}`);
       const data = await response.json();
       const bookmarkId = data[0]?.id;
 
       if (!bookmarkId) throw new Error('Bookmark not found');
 
-      await fetch(`http://localhost:3000/bookmarks/${bookmarkId}`, {
+      await fetch(`http://localhost:4000/bookmarks/${bookmarkId}`, {
         method: 'DELETE',
       });
 
@@ -112,7 +112,7 @@ function Home({ filter, searchTerm }) {
 
   const confirmDelete = async () => {
     try {
-      await fetch(`http://localhost:3000/emotions/${deleteId}`, {
+      await fetch(`http://localhost:4000/emotions/${deleteId}`, {
         method: 'DELETE',
       });
 
